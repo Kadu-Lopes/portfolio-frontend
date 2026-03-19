@@ -1,10 +1,8 @@
 :root {
-    --bg-primary: #0D1117;      /* fundo principal */
-    --bg-secondary: #161B22;    /* containers / cards */
-    --bg-tertiary: #1C2128;     /* hover ou leve destaque */
-
-    --text-primary: #E6EDF3;
-    --text-secondary: #9DA7B3;
-
-    --accent: #3B82F6;          /* azul discreto profissional */
+--bg: #0D1117;
+--card: #161B22;
+--primary: #58A6FF;
+--secondary: #1F6FEB;
+--text: #E6EDF3;
+--text-secondary: #8B949E;
 }

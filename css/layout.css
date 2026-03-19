@@ -1,49 +1,74 @@
+/* ===== BODY ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== MAIN ===== */
 main {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
 }
 
+/* ===== SOBRE MIM ===== */
 section#sobreMim {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 1.5rem;
-    text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  text-align: center;
 }
 
-/* div.container-sobreMim {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-} */
+div.container-sobreMim {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
 
 section#sobreMim img {
-    display: block;
-    width: 80%;
-    max-width: 280px;
-    height: auto;
-    margin: 0 auto;
+  display: block;
+  width: 80%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto;
 }
 
-section#tecnologias img{
-    width: 50%;
-    height: auto;
+/* ===== PROJETOS ===== */
+section#projetos {
+  /* estilizear conforme necessário */
 }
 
+/* ===== TECNOLOGIAS ===== */
 section#tecnologias {
-
-    text-align: center;
-}
-section #container-tecnologias {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 1rem;
+  text-align: center;
 }
 
-/* div.img-html , div.img-css , div.img-js , div.img-git , div.img-github {
-    
-} */
+section#tecnologias h2 {
+  margin-bottom: 1rem;
+}
+
+/* ===== HEADER ===== */
+header {
+  color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== FOOTER ===== */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+    margin: 64px 0;
+}

@@ -1,65 +1,159 @@
+/* ===== RESET E FONT ===== */
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
- /* ===== HEADER BASE ===== */
-
+/* ===== HEADER ===== */
 header {
-    background-color: var(--cor-secundaria);
+  background-color: var(--cor-secundaria);
 }
 
- header nav ul{
+header nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* ===== SOBRE MIM ===== */
 section#sobreMim img {
-    border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 20px rgba(88,166,255,0.5);
 }
-/* botão aparece no mobile */
-.menu-toggle {
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--text);
+}
+
+.destaque {
+  color: var(--primary);
+}
+
+div.container-sobreMim {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
+  align-items: center;
+  text-align: center;
 }
 
-/* linhas do hamburguer */
-.menu-toggle span {
-  width: 28px;
-  height: 3px;
-  background: #333;
+div#continer-foto img {
+  max-width: 280px;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* menu escondido inicialmente */
-.menu {
-  display: none;
-  flex-direction: column;
-  background: white;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  gap: 20px;
+/* ===== MENU MOBILE ===== */
+.menu li {
+  list-style-type: none;
 }
-
-/* menu aberto */
-.menu.ativo {
-  display: flex;
-}
-
+/* ===== FOOTER ===== */
 footer ul {
-    list-style: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* section tecnologias */
-div.img-html , div.img-css , div.img-js , div.img-git , div.img-github {
-    /* background-color: var(--bg-secondary); */
-    place-items: center;
-    height: 4rem;
 
+/* ===== TECNOLOGIAS / ESTEIRA ===== */
 
-/* section tecnologias */
+/* container do efeito */
+
+.slider {
+  overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 650px) {
+  .slider {
+    width: 100%;
+  }
+}
+
+/* linha de itens */
+.track {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+/* cada item */
+.tech-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  flex-shrink: 0;
+
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  border: 1px solid #58A6FF;
+}
+
+/* imagens */
+#tecnologias img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ===== ADICIONAIS ===== */
+/* ajustes de margem/padding se necessário */
+section#tecnologias h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* FADE NAS PONTAS */
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px; /* largura do fade, ajuste se quiser maior/menor */
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* não atrapalha o hover */
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+/* GERAL */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-weight: 600;
+  width: 80%;
+  font-size: 1.2rem;
+}
+
