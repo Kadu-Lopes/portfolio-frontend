@@ -1,28 +1,27 @@
-/* ===== RESET E FONT ===== */
+/* ============================= */
+/* 🔹 RESET / BASE */
+/* ============================= */
+
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
   padding: 0;
   background-color: var(--bg);
   color: var(--text);
 }
 
-/* ===== HEADER ===== */
-header {
-  background-color: var(--cor-secundaria);
+a {
+  color: var(--primary);
+  text-decoration: none;
 }
 
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+a:hover {
+  color: var(--text);
 }
 
-/* ===== SOBRE MIM ===== */
-section#sobreMim img {
-  border-radius: 50%;
-  border: 3px solid var(--primary);
-  box-shadow: 0 0 20px rgba(88,166,255,0.5);
+p {
+  font-weight: 600;
+  width: 80%;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -34,11 +33,37 @@ h1 {
   color: var(--primary);
 }
 
-div.container-sobreMim {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+/* ============================= */
+/* 🔹 HEADER */
+/* ============================= */
+
+header {
+  background-color: var(--cor-secundaria);
+}
+
+header nav ul {
+
+}
+
+
+/* ============================= */
+/* 🔹 MENU */
+/* ============================= */
+
+.menu li {
+  list-style-type: none;
+}
+
+
+/* ============================= */
+/* 🔹 SOBRE MIM */
+/* ============================= */
+
+section#sobreMim img {
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 20px rgba(88,166,255,0.5);
 }
 
 div#continer-foto img {
@@ -49,22 +74,41 @@ div#continer-foto img {
   margin: 0 auto;
 }
 
-/* ===== MENU MOBILE ===== */
-.menu li {
-  list-style-type: none;
+
+/* ============================= */
+/* 🔹 BOTÃO CV */
+/* ============================= */
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 14px 28px;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 0 rgba(88, 166, 255, 0);
 }
-/* ===== FOOTER ===== */
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+.btn-cv:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(88, 166, 255, 0.25);
 }
 
 
-/* ===== TECNOLOGIAS / ESTEIRA ===== */
+/* ============================= */
+/* 🔹 TECNOLOGIAS / ESTEIRA */
+/* ============================= */
 
 /* container do efeito */
-
 .slider {
   overflow: hidden;
   width: 50%;
@@ -111,49 +155,39 @@ footer ul {
   object-fit: contain;
 }
 
-/* ===== ADICIONAIS ===== */
-/* ajustes de margem/padding se necessário */
+/* título */
 section#tecnologias h2 {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-/* FADE NAS PONTAS */
+/* fade nas pontas */
 .slider::before,
 .slider::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 80px; /* largura do fade, ajuste se quiser maior/menor */
+  width: 90px;
   height: 100%;
   z-index: 2;
-  pointer-events: none; /* não atrapalha o hover */
+  pointer-events: none;
 }
 
 .slider::before {
   left: 0;
-  background: linear-gradient(to right, #fff, transparent);
+  background: linear-gradient(to right, var(--bg), transparent);
 }
 
 .slider::after {
   right: 0;
-  background: linear-gradient(to left, #fff, transparent);
+  background: linear-gradient(to left, var(--bg), transparent);
 }
 
-/* GERAL */
 
-a {
-  color: var(--primary);
-  text-decoration: none;
+/* ============================= */
+/* 🔹 FOOTER */
+/* ============================= */
+
+footer ul {
+  list-style: none;
 }
-
-a:hover {
-  text-decoration: underline;
-}
-
-p {
-  font-weight: 600;
-  width: 80%;
-  font-size: 1.2rem;
-}
-

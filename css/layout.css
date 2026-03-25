@@ -1,11 +1,22 @@
-/* ===== BODY ===== */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
+/* ============================= */
+/* 🔹 BASE / BODY */
+/* ============================= */
+
+html, body {
+  height: 100%;
 }
 
-/* ===== MAIN ===== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* ============================= */
+/* 🔹 LAYOUT PRINCIPAL */
+/* ============================= */
+
 main {
   display: flex;
   flex-direction: column;
@@ -13,7 +24,26 @@ main {
   margin: 0 auto;
 }
 
-/* ===== SOBRE MIM ===== */
+section {
+  margin: 64px 0;
+}
+
+
+/* ============================= */
+/* 🔹 HEADER */
+/* ============================= */
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+/* ============================= */
+/* 🔹 SOBRE MIM */
+/* ============================= */
+
 section#sobreMim {
   display: grid;
   grid-template-columns: 1fr;
@@ -26,6 +56,8 @@ div.container-sobreMim {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
 }
 
@@ -37,38 +69,51 @@ section#sobreMim img {
   margin: 0 auto;
 }
 
-/* ===== PROJETOS ===== */
+
+/* ============================= */
+/* 🔹 PROJETOS */
+/* ============================= */
+
 section#projetos {
   /* estilizear conforme necessário */
 }
 
-/* ===== TECNOLOGIAS ===== */
+
+/* ============================= */
+/* 🔹 TECNOLOGIAS */
+/* ============================= */
+
 section#tecnologias {
   text-align: center;
 }
 
-section#tecnologias h2 {
-  margin-bottom: 1rem;
+
+
+/* ============================= */
+/* 🔹 FOOTER */
+/* ============================= */
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--text-secondary);
+  background: var(--card);
+}
+footer h2 {
+  color: var(--text);
 }
 
-/* ===== HEADER ===== */
-header {
-  color: #fff;
+footer a {
+  color: var(--text-secondary);
 }
 
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+footer a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary);
 }
-
-/* ===== FOOTER ===== */
 footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-section {
-    margin: 64px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
